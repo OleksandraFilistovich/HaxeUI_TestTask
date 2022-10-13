@@ -8,8 +8,8 @@
 	<!-- output -->
 	<app main="Main" file="TestTaskHaxeUI" path="bin" />
 	
-	<window background="#ffffff" fullscreen="false" resizable="false" borderless="false"/>
-	<window width="520" height="540" unless="mobile" />
+	<window background="#dddddd" fullscreen="false" resizable="false" borderless="false"/>
+	<window width="520" height="550" unless="mobile" />
 	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
 	
 	<!-- classpath, haxe libs -->

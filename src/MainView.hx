@@ -1,20 +1,21 @@
 package ;
 
 
-import haxe.ui.core.Component;
-
 import haxe.ui.containers.Box;
 import haxe.ui.containers.VBox;
 import haxe.ui.containers.Grid;
 import haxe.ui.containers.TabView;
-import haxe.ui.containers.ScrollView;
-import haxe.ui.containers.dialogs.Dialogs.messageBox;
 
 import haxe.ui.components.Label;
 import haxe.ui.components.Button;
 
+import MyScrollView;
+import MyButton;
+
 
 class MainView extends VBox {
+	
+	// create mainView
     public function new() {
         super();
 		
@@ -61,32 +62,12 @@ class MainView extends VBox {
 		
 		for (i in 0...4) {
 			for (j in 0...4){
-				grid1.addComponent(new_button('0-$i-$j'));
-				grid2.addComponent(new_button('1-$i-$j'));
-				grid3.addComponent(new_button('2-$i-$j'));
+				var obj:CreateSomething<Button> = CreateSomething.create();
+				
+				grid1.addComponent(obj.new_button('0-$i-$j'));
+				grid2.addComponent(obj.new_button('1-$i-$j'));
+				grid3.addComponent(obj.new_button('2-$i-$j'));
 			}
 		}
-		
     }
-	
-	public function new_button(index:String):Button {
-		
-		var button = new Button();
-		button.text = 'Button $index';
-		button.id = index;
-		button.icon = "haxeui-core/styles/default/haxeui_small.png";
-		button.iconPosition = "bottom";
-		button.onClick = function(e) {messageBox('Button $index', 'Info', 'info'); };
-		
-		return button;
-	}
-}
-
-
-class MyScrollView extends ScrollView {
-    public function new() {
-		super();
-		contentHeight = 500;
-		contentWidth = 500;
-	}
 }

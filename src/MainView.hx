@@ -12,8 +12,11 @@ import haxe.ui.components.Button;
 import MyScrollView;
 import MyButton;
 
+import Controller;
 
 class MainView extends VBox {
+	
+	var c = new Controller();
 	
 	// create mainView
     public function new() {

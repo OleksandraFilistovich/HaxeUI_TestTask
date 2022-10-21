@@ -16,12 +16,12 @@ import Controller;
 
 class MainView extends VBox {
 	
-	var c = new Controller();
+	//var c = new Controller();
 	
 	// create mainView
     public function new() {
         super();
-		
+		//trace('hello');
 		// initialize 3 tabs
 		var tabs = new TabView();
 		addChild(tabs);

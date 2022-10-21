@@ -6,7 +6,7 @@ class Model
 
 	public function new() 
 	{
-		//trace('in model init');
+		trace('in model init');
 	}
 	
 }

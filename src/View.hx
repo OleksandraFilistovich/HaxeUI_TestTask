@@ -10,7 +10,7 @@ class View
 	public function new(controller) 
 	{
 		this.controller = controller;
-		//trace('in view init');
+		trace('in view init');
 	}
 	
 }

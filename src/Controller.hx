@@ -13,7 +13,7 @@ class Controller
 	{
 		this.model = new Model();
 		this.view = new View(this);
-		//trace('in controller init');
+		trace('in controller init');
 	}
 	
 }

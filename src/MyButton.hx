@@ -2,7 +2,8 @@ package;
 
 
 import haxe.ui.components.Button;
-import haxe.ui.containers.dialogs.Dialogs.messageBox;
+
+import Controller;
 
 
 class CreateSomething<T> {
@@ -17,14 +18,14 @@ class CreateSomething<T> {
 	private function new () {}
 	
 	// create button
-	public function new_button(index:String):Button{
+	public function new_button(index:String, controller:Controller):Button{
 		
 		var button = new Button();
 		button.text = 'Button $index';
 		button.id = index;
 		button.icon = "haxeui-core/styles/default/haxeui_small.png";
 		button.iconPosition = "bottom";
-		button.onClick = function(e) {messageBox('Button $index', 'Info', 'info'); };
+		button.onClick = function(e) {controller.button_click('Button $index'); };
 		
 		return button;
 	}

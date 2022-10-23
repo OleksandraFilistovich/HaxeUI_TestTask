@@ -4,7 +4,7 @@ import openfl.display.Sprite;
 
 import haxe.ui.HaxeUIApp;
 
-import MainView;
+import Controller;
 
 /**
  * ...
@@ -17,8 +17,12 @@ import MainView;
     public static function main() {
         var app = new HaxeUIApp();
         app.ready(function() {
-            app.addComponent(new MainView());
-
+			
+			var controller = new Controller();
+			var result = controller.main();
+			
+            app.addComponent(result);
+			
             app.start();
         });
     }

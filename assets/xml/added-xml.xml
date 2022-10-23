@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<vbox>
+	<label>Content for the tab loaded via XML.</label>
+	<label>Some test buttons:</label>
+	
+	<button name='Button 1'>
+		<icon>haxeui-core/styles/default/haxeui_small.png</icon>
+	</button>
+	<button name='Button 2'>
+		<icon>haxeui-core/styles/default/haxeui_small.png</icon>
+	</button>
+</vbox>

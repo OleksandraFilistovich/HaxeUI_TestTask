@@ -20,7 +20,8 @@
 	
 	<!-- assets -->
 	<icon path="assets/haxe-logo.svg" />
-	<!--assets path="assets/img" rename="img" /-->
+	<assets path="assets/img" rename="img" />
+	<assets path="assets/xml" rename="xml" />
 	
 	<!-- optimize output
 	<haxeflag name="-dce full" /> -->

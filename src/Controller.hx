@@ -2,7 +2,7 @@ package;
 
 import View;
 import Model;
-
+import XMLReader;
 
 class Controller 
 {
@@ -21,6 +21,9 @@ class Controller
 		
 		view.tabs(model.tab_count);
 		view.button_grid(model.button_tabs, model.columns_count);
+		
+		var xml = new XMLReader();
+		view.label(xml.read(),3);
 		
 		return result;
 	}

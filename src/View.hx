@@ -4,6 +4,7 @@ import haxe.ui.containers.Box;
 import haxe.ui.containers.VBox;
 import haxe.ui.containers.Grid;
 import haxe.ui.containers.TabView;
+import haxe.ui.core.Component;
 
 import haxe.ui.components.Label;
 import haxe.ui.components.Button;
@@ -97,5 +98,10 @@ class View
 		{
 			messageBox(message, 'Info', 'info');
 		}
+	}
+	
+	public function xml_init(tab_num:Int, comp:Component)
+	{
+		tab_view.getComponentAt(tab_num).addComponent(comp);
 	}
 }

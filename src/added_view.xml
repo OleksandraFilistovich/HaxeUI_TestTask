@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
-<vbox>
-	<label textAlign="left" text="Content for the XML tab." style="color:gray;"/>
-	<label textAlign="left" text="Text for the page." style="color:red;"/>
-</vbox>

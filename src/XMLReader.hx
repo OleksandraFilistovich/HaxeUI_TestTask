@@ -17,6 +17,8 @@ class XMLReader
 	
 	public function read(controller:Controller, component:Component)
 	{
+		// parses xml into labels and buttons
+		// sends then to controller to handle build
 		var xml = Xml.parse("<vbox><label>Content for the tab loaded via XML.</label><label>Some test buttons:</label><button name='extra 1'><icon>haxeui-core/styles/default/haxeui_small.png</icon></button><button name='extra 2'><icon>haxeui-core/styles/default/haxeui_small.png</icon></button></vbox>");
 		var vbox = new Access(xml.firstElement());
 		

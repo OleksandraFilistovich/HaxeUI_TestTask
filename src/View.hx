@@ -26,18 +26,19 @@ class View
 
 	public function new(controller) 
 	{
-		this.controller = controller;
-		
+		this.controller = controller;	
 	}
 	
 	public function start()
 	{
+		// starts app view
 		main_container = new VBox();
 		return main_container;
 	}
 	
 	public function tabs(count:Int)
 	{
+		// builds tab_view in main app component
 		tab_view = new TabView();
 		var box:Box;
 		main_container.addComponent(tab_view);
@@ -55,7 +56,7 @@ class View
 	
 	public function button_grid(pages:Array<Int>, columns:Int)
 	{
-		
+		// adds button grids to given tabs
 		for (i in pages){
 			var grid_container = scroll_grid(i, columns);
 			
@@ -72,6 +73,8 @@ class View
 	
 	public function scroll_grid(tab_num:Int, columns:Int)
 	{
+		// returns new scroll_grid as component
+		// adds it to given tab
 		var grid = new Grid();
 		var scrollview = new MyScrollView();
 		
@@ -83,6 +86,8 @@ class View
 	
 	public function label(text:String, tab_num:Int)
 	{
+		// creates label and returns it
+		// adds it to given tab, if tab_num is not -1
 		var label = new Label();
 		label.text = text;
 		if (tab_num != -1)
@@ -94,6 +99,8 @@ class View
 	
 	public function button(name:String, icon:String, tab_num:Int)
 	{
+		// creates button and returns it
+		// adds it to given tab, if tab_num is not -1
 		var obj:CreateSomething<Button> = CreateSomething.create();
 		if (tab_num != -1)
 		{
@@ -104,6 +111,7 @@ class View
 	
 	public function message(message:String, type:String)
 	{
+		// calls messageBox to pop-up
 		if (type == 'info')
 		{
 			messageBox(message, 'Info', 'info');
@@ -112,11 +120,7 @@ class View
 	
 	public function add_component(component:Component, parent_component:Component)
 	{
+		// adds component to given parent component
 		parent_component.addComponent(component);
 	}
-	
-	//public function xml_init(tab_num:Int, comp:Component)
-	//{
-	//	tab_view.getComponentAt(tab_num).addComponent(comp);
-	//}
 }

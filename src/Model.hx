@@ -10,6 +10,7 @@ class Model
 
 	public function new(tab_count:Int = 4, columns_count:Int = 4)
 	{
+		// saves save constants for build
 		this.tab_count = tab_count;
 		this.columns_count = columns_count;
 	

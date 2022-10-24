@@ -18,12 +18,12 @@ class CreateSomething<T> {
 	private function new () {}
 	
 	// create button
-	public function new_button(index:String, controller:Controller):Button{
+	public function new_button(index:String, icon_str:String, controller:Controller):Button{
 		
 		var button = new Button();
 		button.text = 'Button $index';
 		button.id = index;
-		button.icon = "haxeui-core/styles/default/haxeui_small.png";
+		button.icon = icon_str;
 		button.iconPosition = "bottom";
 		button.onClick = function(e) {controller.button_click('Button $index'); };
 		

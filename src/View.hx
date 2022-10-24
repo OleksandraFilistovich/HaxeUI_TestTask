@@ -62,7 +62,7 @@ class View
 			for (j in 0...columns) {
 				for (g in 0...columns){
 					var obj:CreateSomething<Button> = CreateSomething.create();
-					grid_container.addComponent(obj.new_button('$i-$j-$g', controller));
+					grid_container.addComponent(obj.new_button('$i-$j-$g', "haxeui-core/styles/default/haxeui_small.png", controller));
 					
 				}
 			}
@@ -70,7 +70,7 @@ class View
 		}
 	}
 	
-	private function scroll_grid(tab_num:Int, columns:Int)
+	public function scroll_grid(tab_num:Int, columns:Int)
 	{
 		var grid = new Grid();
 		var scrollview = new MyScrollView();
@@ -92,6 +92,16 @@ class View
 		return label;
 	}
 	
+	public function button(name:String, icon:String, tab_num:Int)
+	{
+		var obj:CreateSomething<Button> = CreateSomething.create();
+		if (tab_num != -1)
+		{
+			tab_view.getComponentAt(tab_num).addComponent(obj.new_button('$name', icon, controller));
+		}
+		return obj.new_button('$name', icon, controller);
+	}
+	
 	public function message(message:String, type:String)
 	{
 		if (type == 'info')
@@ -100,8 +110,13 @@ class View
 		}
 	}
 	
-	public function xml_init(tab_num:Int, comp:Component)
+	public function add_component(component:Component, parent_component:Component)
 	{
-		tab_view.getComponentAt(tab_num).addComponent(comp);
+		parent_component.addComponent(component);
 	}
+	
+	//public function xml_init(tab_num:Int, comp:Component)
+	//{
+	//	tab_view.getComponentAt(tab_num).addComponent(comp);
+	//}
 }

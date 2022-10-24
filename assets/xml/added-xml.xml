@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <vbox>
+	
+	<label>Content for the tab loaded via XML.</label>
+	<label>Some test buttons:</label>
+	
 	<button name='extra 1'>
 		<icon>haxeui-core/styles/default/haxeui_small.png</icon>
 	</button>
@@ -8,5 +12,4 @@
 		<icon>haxeui-core/styles/default/haxeui_small.png</icon>
 	</button>
 	
-	<label>Content for the tab loaded via XML.</label>
 </vbox>

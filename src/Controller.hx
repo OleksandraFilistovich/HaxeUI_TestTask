@@ -26,7 +26,7 @@ class Controller
 		view.tabs(model.tab_count);
 		view.button_grid(model.button_tabs, model.columns_count);
 		// adds tab build with xml instructions
-		xml_component();
+		xml_component("xml/added-xml.xml");
 		// returns whole view component
 		return result;
 	}
@@ -37,12 +37,12 @@ class Controller
 		view.message(name, 'info');
 	}
 	
-	private function xml_component()
+	private function xml_component(xml_file:String)
 	{
 		// creates component with builded xml instructions
 		var xml = new XMLReader();
 		var scroll = view.scroll_grid(model.xml_tabs, 1);
-		xml.read(this, scroll);
+		xml.read(this, scroll, xml_file);
 	}
 	
 	public function label_component(text:String, component:Component)
